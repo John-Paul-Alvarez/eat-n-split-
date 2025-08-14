@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const initialFriends = [
   {
@@ -59,7 +59,7 @@ export default function App(){
       
       <Button onClick={handleShowFriend}>{showAddFriend? "Close": "Add Friend" }</Button>
       </div> 
-      {selectedFriend && <FormSplitBill selectedFriend={selectedFriend} onSplitBill={handleSplitBill}/>}
+      {selectedFriend && <FormSplitBill key={selectedFriend.id} selectedFriend={selectedFriend} onSplitBill={handleSplitBill}/>}
   </div>
 } 
 
